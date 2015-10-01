@@ -36,7 +36,7 @@ namespace Shadowsocks.Controller
             {
                 if (enabled)
                 {
-                    if (timer?.Change(0, Interval) == null)
+                    if (timer.Change(0, Interval) == false)
                     {
                         state = new State();
                         timer = new Timer(Evaluate, state, 0, Interval);
@@ -44,7 +44,7 @@ namespace Shadowsocks.Controller
                 }
                 else
                 {
-                    timer?.Dispose();
+                    timer.Dispose();
                 }
                 return true;
             }

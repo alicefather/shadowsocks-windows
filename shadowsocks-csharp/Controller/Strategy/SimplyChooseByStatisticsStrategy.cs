@@ -149,7 +149,7 @@ namespace Shadowsocks.Controller.Strategy
         public void ReloadServers()
         {
             ChooseNewServer(_controller.GetCurrentConfiguration().configs);
-            timer?.Change(0, CachedInterval);
+            timer.Change(0, CachedInterval);
         }
 
         public void SetFailure(Server server)

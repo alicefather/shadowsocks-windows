@@ -69,7 +69,7 @@ namespace Shadowsocks.View
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GenQR((sender as ListBox)?.SelectedValue.ToString());
+            GenQR((sender as ListBox).SelectedValue.ToString());
         }
     }
 }

@@ -49,7 +49,7 @@ namespace Shadowsocks.Controller
             lock (this.Handlers)
             {
                 this.Handlers.Add(handler);
-                Logging.Debug($"connections: {Handlers.Count}");
+                Logging.Debug("connections: {Handlers.Count}");
                 DateTime now = DateTime.Now;
                 if (now - _lastSweepTime > TimeSpan.FromSeconds(1))
                 {
@@ -148,7 +148,7 @@ namespace Shadowsocks.Controller
         {
             lock (relay.Handlers)
             {
-                Logging.Debug($"connections: {relay.Handlers.Count}");
+                Logging.Debug("connections: {relay.Handlers.Count}");
                 relay.Handlers.Remove(this);
             }
             lock (this)
